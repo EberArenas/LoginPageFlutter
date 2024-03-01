@@ -1,1 +1,1 @@
-This Flutter project was built on VSCode and written in Dart. It's a small proof of concept for ensuring secure user inputs to sign up and login to a website/app.  
+This Flutter project was built on VSCode and written in Dart. It's a small proof of concept for ensuring secure user inputs to sign up and login to a website/app. If you intend to run it, create a project on VSCode's Flutter extension and copy the code onto the lib files there.
