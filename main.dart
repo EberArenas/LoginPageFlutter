@@ -60,7 +60,8 @@ class _LoginPageState extends State<LoginPage> {
           _message = 'Caps Lock is ON';
         });
         return KeyEventResult.handled;
-      } else {
+      } 
+      else {
         setState(() {
           _message = '';
         });
@@ -97,7 +98,8 @@ class _LoginPageState extends State<LoginPage> {
               onFocusChange: (value){
                 _isCapsLockOn = HardwareKeyboard.instance.lockModesEnabled
           .contains(KeyboardLockMode.capsLock);
-
+                
+      //Checking for capslock in the password field
       if (_isCapsLockOn) {
         setState(() {
           _message = 'Caps Lock is ON';
@@ -148,6 +150,8 @@ class _LoginPageState extends State<LoginPage> {
                     })
               ],
             ),
+
+            //Forgot password hypertext
             OverflowBar(
               alignment: MainAxisAlignment.end,
               children: [
@@ -155,6 +159,8 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {},
                   child: Text("Forgot Password?"),
                 ),
+
+                //Checking for user misinput, since fields are not empty 
                 TextButton(
                   onPressed: () {
                     if (_usernameController.text != '' &&
@@ -192,6 +198,8 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 width: 10,
               ),
+
+              //Login via facebook/windows/apple
               Text("Or login with:"),
               SizedBox(
                 width: 10,
