@@ -109,19 +109,20 @@ class _SignUpPageState extends State<SignUpPage> {
               Focus(
                 onKeyEvent: _handleKeyEvent,
                 onFocusChange: (value){
-                _isCapsLockOn = HardwareKeyboard.instance.lockModesEnabled
-          .contains(KeyboardLockMode.capsLock);
+                  _isCapsLockOn = HardwareKeyboard.instance.lockModesEnabled
+                  .contains(KeyboardLockMode.capsLock);
 
-      if (_isCapsLockOn) {
-        setState(() {
-          _message = 'Caps Lock is ON';
-        });
-      } else {
-        setState(() {
-          _message = '';
-        });
-      }
-              },
+                  if (_isCapsLockOn) {
+                    setState(() {
+                      _message = 'Caps Lock is ON';
+                    });
+                  } 
+                  else {
+                    setState(() {
+                      _message = '';
+                    });
+                  }
+               },
                 child: TextFormField(
                   key: field2Key,
                   focusNode: focusNode2,
